@@ -10,7 +10,7 @@ body {
 #header {
     background: rgba(255, 204, 204, 0.9);
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 0 0 15px 15px;
     display: inline-block;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
