@@ -3,6 +3,8 @@ body {
     font-family: 'Happy Monkey', cursive;
     background: linear-gradient(#a2d2ff, #EFB0C9);
     color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, h4, p {
@@ -13,96 +15,38 @@ h1, h2, h3, h4, p {
     width: 150px;
     border-radius: 50%;
     border: 6px solid #EFB0C9;
-    margin-bottom: 10px;
-}
-
-#leeftijd {
-    background: #EFB0C9;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-#datum {
-    margin: 0;
-    background: #EFB0C9;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-#header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .gift-section {
-    margin-top: 50px;
-}
-
-.gift-title {
-    margin-bottom: 10px;
-}
-
-.gift-hint {
-    margin-top: 0;
+    margin-top: 30px;
+    padding: 10px;
 }
 
 .gift-img {
-    margin: 0 auto;
-    width: 400px;
-    height: 400px;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1;
     border: 6px solid white;
     border-radius: 10px;
     background-image: url("images/gift-cover.jpg");
     background-size: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-position: center;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
-#gift-img-happy:hover {
-    background-image: url("images/happy.gif");
-}
-
-#gift-img-hot:hover {
-    background-image: url("images/hot.gif");
-}
-
-#gift-img-genius:hover {
-    background-image: url("images/genius.gif");
-}
-
-#gift-img-badass:hover {
-    background-image: url("images/badass.gif");
-}
-
-#gift-img-kisses:hover {
-    background-image: url("images/Kisses.gif");
-}
-
-.decent-photos {
+.photo-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin-top: 10px;
 }
 
-.decent-photo {
-    width: 180px; 
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.crazy-photos {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.crazy-photo {
-    width: 150px; 
+.photo {
+    width: 45%;
+    max-width: 180px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

@@ -1,64 +1,76 @@
-<html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div id="header">
-            <h1>Vandaag is het Célestine haar verjaardag! 🎉</h1>
-            <img id="profile-img" src="images/profiel.jpg">
-            <h2 id="leeftijd">25 jaar! 😱</h2>
-            <h4 id="datum">09.02.2025</h4>
-        </div> 
-
-        <div class="gift-section">
-            <h3 class="gift-hint">✨ Open de cadeautjes door er met je muis over te gaan of met je vinger te tikken! 🎁🎉</h3>
-            <h2 class="gift-title">Zo blij ben ik vandaag voor jou 🥳</h2>
-            <div class="gift-img" id="gift-img-happy"></div>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Verjaardag Célestine</title>
+    <script>
+        function toggleGift(giftId, imageUrl) {
+            let gift = document.getElementById(giftId);
+            if (gift.dataset.open === "true") {
+                gift.style.backgroundImage = "url('images/gift-cover.jpg')";
+                gift.dataset.open = "false";
+            } else {
+                gift.style.backgroundImage = `url('${imageUrl}')`;
+                gift.dataset.open = "true";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1>Vandaag is het Célestine haar verjaardag! 🎉</h1>
+        <img id="profile-img" src="images/profiel.jpg">
+        <h2 id="leeftijd">25 jaar! 😱</h2>
+        <h4 id="datum">09.02.2025</h4>
+    </div>
+    
+    <div class="gift-section">
+        <h3 class="gift-hint">✨ Tik of klik op de cadeautjes om ze te openen! 🎁🎉</h3>
+        <h2 class="gift-title">Zo blij ben ik vandaag voor jou 🥳</h2>
+        <div class="gift-img" id="gift-img-happy" onclick="toggleGift('gift-img-happy', 'images/happy.gif')"></div>
+    </div>
+    
+    <div class="gift-section">
+        <h2 class="gift-title">Hoe mensen reageren als jij de kamer binnenkomt 😍</h2>
+        <div class="gift-img" id="gift-img-hot" onclick="toggleGift('gift-img-hot', 'images/hot.gif')"></div>
+    </div>
+    
+    <div class="gift-section">
+        <h2 class="gift-title">Als ik jou met ÉÉN woord moest beschrijven 👇</h2>
+        <div class="gift-img" id="gift-img-genius" onclick="toggleGift('gift-img-genius', 'images/genius.gif')"></div>
+    </div>
+    
+    <div class="gift-section">
+        <h2 class="gift-title">De enige persoon die net zo badass is als jij... 💪</h2>
+        <div class="gift-img" id="gift-img-badass" onclick="toggleGift('gift-img-badass', 'images/badass.gif')"></div>
+    </div>
+    
+    <div class="gift-section">
+        <h2 class="gift-title">Schol & drie dikke zoenen! 🥂😘😘😘</h2>
+        <div class="gift-img" id="gift-img-kisses" onclick="toggleGift('gift-img-kisses', 'images/kisses.gif')"></div>
+    </div>
+    
+    <div class="gift-section">
+        <h2 class="gift-title">Eerst twee fatsoenlijke... 😇📸</h2>
+        <div class="photo-grid">
+            <img class="photo" src="images/decent1.jpg" alt="Fatsoenlijke foto 1">
+            <img class="photo" src="images/decent2.jpg" alt="Fatsoenlijke foto 2">
         </div>
-        
-        <div class="gift-section">
-            <h2 class="gift-title">Hoe mensen reageren als jij de kamer binnenkomt 😍</h2>
-            <div class="gift-img" id="gift-img-hot"></div>
+    </div>
+    
+    <div class="gift-section">
+        <h2 class="gift-title">...gevolgd door drie adembenemende 🤩📸</h2>
+        <div class="photo-grid">
+            <img class="photo" src="images/crazy1.jpg" alt="Zotte foto 1">
+            <img class="photo" src="images/crazy2.jpg" alt="Zotte foto 2">
+            <img class="photo" src="images/crazy3.jpg" alt="Zotte foto 3">
         </div>
-
-        <div class="gift-section">
-            <h2 class="gift-title">Als ik jou met ÉÉN woord moest beschrijven 👇</h2>
-            <div class="gift-img" id="gift-img-genius"></div>
-        </div>
-        
-        <div class="gift-section">
-            <h2 class="gift-title">De enige persoon die net zo badass is als jij... 💪</h2>
-            <div class="gift-img" id="gift-img-badass"></div>
-        </div>
-        
-         <div class="gift-section">
-            <h2 class="gift-title">Schol & drie dikke zoenen! 🥂😘😘😘</h2>
-            <div class="gift-img" id="gift-img-kisses"></div>
-        </div>
-
-        <div class="gift-section">
-            <h2 class="gift-title">Eerst twee fatsoenlijke... 😇📸</h2>
-            <div class="decent-photos">
-                <img class="decent-photo" src="images/decent1.jpg" alt="Fatsoenlijke foto 1">
-                <img class="decent-photo" src="images/decent2.jpg" alt="Fatsoenlijke foto 2">
-            </div>
-        </div>        
-
-        <div class="gift-section">
-            <h2 class="gift-title">...gevolgd door drie adembenemende 🤩📸</h2>
-            <div class="crazy-photos">
-                <img class="crazy-photo" src="images/crazy1.jpg" alt="Zotte foto 1">
-                <img class="crazy-photo" src="images/crazy2.jpg" alt="Zotte foto 2">
-                <img class="crazy-photo" src="images/crazy3.jpg" alt="Zotte foto 3">
-            </div>
-            <h2 class="gift-title">Ly 😘</h2>
-        </div>
-        
-    </body>
+        <h2 class="gift-title">Ly 😘</h2>
+    </div>
+</body>
 </html>
